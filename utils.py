@@ -1,9 +1,6 @@
-# Add your utilities or helper functions to this file.
-
 import os
 from dotenv import load_dotenv, find_dotenv
 
-# these expect to find a .env file at the directory above the lesson.                                                                                                                     # the format for that file is (without the comment)                                                                                                                                       #API_KEYNAME=AStringThatIsTheLongAPIKeyFromSomeService
 def load_env():
     _ = load_dotenv(find_dotenv())
 
@@ -18,8 +15,6 @@ def get_serper_api_key():
     return openai_api_key
 
 
-# break line every 80 characters if line is longer than 80 characters
-# don't break in the middle of a word
 def pretty_print_result(result):
   parsed_result = []
   for line in result.split('\n'):
